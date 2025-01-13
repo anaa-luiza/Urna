@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [NgClass, NgFor, NgIf,],
   templateUrl: './teclas.component.html',
-  styleUrl: './teclas.component.scss'
+  styleUrl: './teclas.component.scss' 
 })
 export class TeclasComponent {
   @Input() teclas: boolean = true;
