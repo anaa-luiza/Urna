@@ -9,7 +9,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './teclas.component.scss' 
 })
 export class TeclasComponent {
+
   @Input() teclas: boolean = true;
   
-
+  Confirmar() {
+    throw new Error('Method not implemented.');
+    }
+    Corrigir() {
+    throw new Error('Method not implemented.');
+    }
+    Branco() {
+    throw new Error('Method not implemented.');
+    }
 }
