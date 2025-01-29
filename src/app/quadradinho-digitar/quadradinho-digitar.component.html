@@ -1,8 +1,3 @@
-<div *ngIf="quadradinhodigitar" class="quadradinhodigitar" >
-   <div *ngFor="let linha of numeros">
-      <span *ngFor="let numeros of linha" class="numeros">{{numeros}}</span>
-
-   </div>
-</div>
+<span (click)="EnviarNumero(numero)" *ngFor="let numero of numeros" class="numeros">{{numero}}</span>
 
 

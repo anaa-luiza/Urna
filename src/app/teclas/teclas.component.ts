@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-teclas',
@@ -9,16 +9,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './teclas.component.scss' 
 })
 export class TeclasComponent {
-
+@Output() BotaoCorrigir = new EventEmitter();
   @Input() teclas: boolean = true;
   
-  Confirmar() {
+  public Confirmar() {
     throw new Error('Method not implemented.');
     }
-    Corrigir() {
-    throw new Error('Method not implemented.');
+    public Corrigir() {
+    this.BotaoCorrigir.emit();
     }
-    Branco() {
+    public Branco() {
     throw new Error('Method not implemented.');
     }
 }

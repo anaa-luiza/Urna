@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quadradinho-digitar',
@@ -9,14 +9,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './quadradinho-digitar.component.scss'
 })
 export class QuadradinhoDigitarComponent {
-  @Input() quadradinhodigitar: number[]= []
-  numeros: number[] [] = 
-  [
-  [9, 8, 7,],
-  [6, 5, 4,],
-  [3, 2, 1],
-    [0 ]
+@Output() numeroDigitado = new EventEmitter();
+  numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 
-  ];
+EnviarNumero(numeroClicado: number)
+{
+  this.numeroDigitado.emit(numeroClicado);
+}
 
 }
